@@ -28,6 +28,8 @@ jobs:
 
       - name: Build Next.js app
         run: npm run build
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
 
       - name: Sync Capacitor
         run: npx cap sync android
